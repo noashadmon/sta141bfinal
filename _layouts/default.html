@@ -106,10 +106,39 @@
           <h3>Comparing All Titles from News Sources</h3>
           Since there did not seem to be a big enough difference between the polarity and subjectivity of the titles for the different kinds of news sources, we wanted to check to see how similar the titles are from each other.
           We did this using the scikit-learn Python package. Our results are shown in the table below:
-          <img src = "images/similartitles.png" style="width:50%"><br>
+          <center><img src = "images/similartitles.png" style="width:75%"><br></center>
           Comparing the titles for liberal, conservative, and other news sources for the most similar titles, there are the most similarites within groups rather than between groups. Liberal news sources share the most similar titles with other liberal news sources. Conservative news sources also have the most similar titles to other conservative news sources.
           This may mean that the type of news that liberal news sources cover are very different from those of conservative news sources. Conservative news sources never share a similar article title with liberal news sources. As shown in the table, conservative news sources and liberal news also share similar titles to "other" news sources.
           This implies that "other" news sources cover some liberal and some conservative news.
+
+          <br><br>
+          <h3>The Media's Ideology and Its Perception of Trump</h3>
+          In this section we observe how the viewer base's ideology of different websites affect their reporting on Trump. In order to get ideology scores we webscraped the Pew Reports website "http://www.journalism.org/interactives/media-polarization/table/consume/".
+          We obtained the tables first and then had to split the tables using regular expressions.
+          After creating the data frames we used Pew's scoring ideology scoring criterion: [-8.5 for extreme left, -4.5 for moderate left, 0 for neutral, 4.5 for moderate right, and 8.5 for extreme left.
+          Since we did not have Pew's survey data we first summed the rows, creating a total percentage of people that trust the news source.
+          These numbers will represent the amount of people who actually believe the news source.
+          We then divided each indivual value from the summed row allowing us to see the percentage of the makeup of people who trust this source.
+          We then multiplied these valus by their respective group in the data frame and then summed across to get that news paper's average viewer base.
+          These values wil not necessarily be the same as Pew's actual scores due to Pew having ranges for each value between -10 and 10 and then scoring survey results accordingly.
+          However; this data was not openly available and in our case we thought this would give us a rough estimate of Pew's actual scores. Next, we obtained the size of viewership of each news source by summing the original trust percentages.
+          This gave us a value that would illustrate how many people have actually trust of the news source.
+          We then used this value to represent the size of people who trust the website, and this variable is illustrated in the plots below as the size of the dot.<br>
+          <center><img src = "images/b1.png" style="width:75%"><br></center>
+          In this plot we look at Pew's Ideology Score versus how Trump is represented in the media. In the plot we see a slight trend in news corporations positive sentiment towards Trump and their viewership's ideology. The most obvious examples of this trend include the Economist and Breitbart.
+          For this plot we transformed our sentiment variable by multiplying it by two and subtracting one in order to make positive sentiments positive and negate negative sentiments.
+          Both on the opposite ends of political ideology, however they both seemingly represent their audiences view of Trump.
+          In the next plot we take a look at a random sample of the webpages articles sentiments against a random sample of a newspapers regular title sentiment.
+          <br>
+          <center><img src = "images/b2.png" style="width:75%"><br></center>
+          In the plot above we look at the distribution of the random sampled sentiment and each news organization's sentiment towards Trump.
+          This plot illustrates how most of the News sites have a slight negative sentiment towards Trump's administration than they have on average.
+          <br>
+          <center><img src = "images/b3.png" style="width:75%"><br></center> 
+          In this plot we subtract the average sentiment of website articles from their sentiment of Trump. We see that some wesites like the Washington Post and ABC News do not different strongly on their typical title rhetoric when talking about the current Executive Administration.
+          However, the Economist, New York Times and Huffingoton Post all have covered the Trump Administration with increased scrutiny.
+          On the right side of the political spectrum, Breitbart has reported on Trump with increased positivity.
+          Fox on the other hand has actually reported on the current administration with slightly increased Scrutiny.
         </div>
         {{ content }}
       </section>
