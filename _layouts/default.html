@@ -38,40 +38,41 @@
         <!--<img src="images/donald.jpg" style = "width:30%; height:30%">-->
         <center><h3>Question: How is Trump portrayed in different news sources?</h3></center>
         To begin we split up popular news sites based on their overall political stance. The three different categories are:<br>
+        <p></p>
         <ul>
-          <li>Liberal
+          <li><strong>Liberal</strong>
             <ul>
-              <li><a href = "https://github.com/noashadmon/sta141bfinal/blob/kzhen/Huffpost_clean.ipynb">Huffington Post</a></li>
-              <li><a href="https://github.com/noashadmon/sta141bfinal/blob/noa/nytimes.ipynb">New York Times</a></li>
-              <li>ABC News</li>
-              <li>The Washington Post</li>
+              <li><a href = "http://www.huffingtonpost.com/section/politics">Huffington Post</a></li>
+              <li><a href="https://www.nytimes.com/pages/politics/index.html">New York Times</a></li>
+              <li><a href="http://abcnews.go.com/Politics">ABC News</a></li>
+              <li><a href="https://www.washingtonpost.com/politics/">The Washington Post</a></li>
             </ul>
           </li>
-          <li>Conservative
+          <li><strong>Conservative</strong>
             <ul>
-              <li>Breitbart</li>
-              <li><a href = "https://github.com/noashadmon/sta141bfinal/blob/shichew/Fox%20Titles.ipynb">Fox News</a></li>
+              <li><a href="http://www.breitbart.com">Breitbart</a></li>
+              <li><a href = "http://www.foxnews.com/politics.html">Fox News</a></li>
             </ul>
           </li>
-          <li>Neither
+          <li><strong>Neither</strong>
             <ul>
-              <li><a href = "https://github.com/noashadmon/sta141bfinal/blob/noa/npr.ipynb">NPR</a></li>
-              <li><a href = "https://github.com/noashadmon/sta141bfinal/blob/noa/economist.ipynb">The Economist</a></li>
-              <li><a href = "https://github.com/noashadmon/sta141bfinal/blob/noa/wsj.ipynb">Wall Street Journal</a></li>
+              <li><a href = "http://www.npr.org">NPR</a></li>
+              <li><a href = "http://www.economist.com">The Economist</a></li>
+              <li><a href = "https://www.wsj.com/news/politics">Wall Street Journal</a></li>
             </ul>
           </li>
         </ul>
 
         <div>
           <center><h3>Our Analysis</h3></center>
-          To answer our question, we web scraped the article titles from the 9 news sources’ politics page and/or
+          <p>To answer our question, we web scraped the article titles from the 9 news sources’ politics page and/or
           opinion page over the span of this quarter.
           Once we web scraped the titles into a text file, we filtered out the titles based on the following key words: <br>
           whitehouse, trump, conway, sessions, pence, president, tillerson, devos, flynn, kushner, carson, department, preibus, bannon, spicer, and miller.
-          <br>
-          Once the titles were filtered, we wanted to see whether the more conservative news outlets used more positive language in their titles about Donald Trump, whether the
+          </p>
+          <p>Once the titles were filtered, we wanted to see whether the more conservative news outlets used more positive language in their titles about Donald Trump, whether the
           liberal news outlets used more negative language, and whether the news outlets that deem neither stance are more neutral. <br>
-          To do this, we needed to use two essential Python packages:
+            To do this, we needed to use two essential Python packages:</p>
           <ul>
             <li>NLTK</li>
             <li>TextBlob</li>
