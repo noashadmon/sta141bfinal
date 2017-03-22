@@ -94,7 +94,7 @@
           The conservative news outlets also have many neutral titles, with slightly more positive article titles. This
           is especially true when we look at the boxplot for Breitbart, we can see that the majority of the boxplot
           range is positive.
-          The outlets marked as other seem to be more negative than positive but they indeed have more neutral
+          The "other" news sources seem to be more negative than positive, but they indeed have more neutral
           article titles.
           </p>
           <!--
@@ -111,8 +111,8 @@
           <p>The next plot showcases the subjectivity of each news outlet.</p>
 		<center><img src="images/subjectivity.png" style = "width:75%"></center>
           <p>Each boxplot tells us how subjective the articles for each news source is, subjectivity is a number is on a
-          scale of 0 to 1, where 0 is very objective and 1 is very subjective. From the graph, we see that none of
-          the news outlets are very subjective. The least subjective news outlet is Wall Street Journal and the
+          scale of 0 to 1, where 0 is very objective and 1 is very subjective. The degree of subjectivity of article titles are important because it tells us how biased each of the website are. From the boxplot, we can see that none of
+          the news outlets are very subjective because the IQR for each website is 0.55 or below. The least subjective news outlet is Wall Street Journal and the
           most subjective news outlets are Washington Post and Breitbart.
           This makes sense because The Washington Post is one of the more liberal news outlets (against Trump)
           and Breitbart is headed by a few who hold a position in office under Trump (supporters).
@@ -126,14 +126,14 @@
 		<center><img src = "images/all_polarity_noun.png" style = "width:75%"><br></center>
 		<p> From the barplot above, conservative news outlets show consistency as their overall noun phrase polarity is more positive then negative. Other and liberal news outlets also show more positive noun phrase polarity than negative. An explanation for this is that noun phrases out of content with the whole article title may not show negativity or positivity accurately. </p>
 	 
-	 <center><h3>Question: What events does the grouped news sources frequently report on?</h3></center>	
+	 <h3>Question: What events does the grouped news sources frequently report on?</h3>	
 	 <p> Breaking down the article title's one step further, we looked at the frequency of the words used. First, we removed the names related to Trump's Administration and stop words such as "the" and "that". Then using the Counter() function from the "collections" package will return the most commonly used words. We plotted the top 20 words used per category below:
 		</p>
 		<center><img src = "images/cons_word_freq.png" style = "width:73%"><br></center>
 		<center><img src = "images/liberal_word_freq.png" style = "width:75%"><br></center>
 		<center><img src = "images/other_word_freq.png" style = "width:75%"><br></center>
 	
-	<p> At first sight, we can see that conservative and other news outlet have more nouns rather than verbs. Liberl news outlets have more verbs which could mean the titles are referring to events or sayings that the Trump Administration is involved whereas more nouns are just firm statements of events and topics that involve the Trump Administration. Conservative news outlets like to cover about topics about taxes and budget. Other news outlet top content revolves around healthcare. Liberal news outlet has a good balance between talking about budget and healthcare. Some common words across all three categories of news outlets are Obama, travel, ban. 
+	<p> At first sight, we can see that conservative and other news outlet have more nouns rather than verbs. Liberal news outlets have more verbs which could mean the titles are referring to events or sayings that the Trump Administration is involved whereas more nouns are just firm statements of events and topics that involve the Trump Administration. Conservative news outlets like to cover about topics about taxes and budget. Other news outlet top content revolves around healthcare. Liberal news outlet has a good balance between talking about budget and healthcare. Some common words across all three categories of news outlets are Obama, travel, ban. 
 		</p>
 		
 	
