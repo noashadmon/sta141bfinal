@@ -70,8 +70,8 @@
           Once we web scraped the titles into a text file, we filtered out the titles based on the following key words: </p>
             <p><em>whitehouse, trump, conway, sessions, pence, president, tillerson, devos, flynn, kushner, carson, department, preibus, bannon, spicer, and miller.</em></p>
 
-          <p>Once the titles were filtered, we wanted to see whether the more conservative news outlets used more positive language in their titles about Donald Trump, whether the
-          liberal news outlets used more negative language, and whether the news outlets that deem neither stance are more neutral. </p>
+          <p>Once the titles were filtered, we wanted to see whether the more conservative news outlets used a positive tone in their titles about Donald Trump, whether the
+          liberal news outlets used a negative tone when discussing Trump, and whether the news outlets that deem neither stance have neutral a tone. </p>
             <p>To do this, we needed to use two essential Python packages:</p>
           <ul>
             <li>NLTK</li>
@@ -90,7 +90,7 @@
             The first plot shows the polarity of the titles for each news source. </p>
 		<center><img src="images/polarity.png" style = "width:75%"></center>
           <p>The liberal news outlets have a wide range of values for polarity, where most of the article titles are
-          neutral, but overall seem to have slightly more positive article titles than negative ones.
+          neutral, but overall seem to skew slightly towards positive article titles rather than to negative ones.
           The conservative news outlets also have many neutral titles, with slightly more positive article titles. This
           is especially true when we look at the boxplot for Breitbart, we can see that the majority of the boxplot
           range is positive.
@@ -110,19 +110,19 @@
           <br><br> -->
           <p>The next plot showcases the subjectivity of each news outlet.</p>
 		<center><img src="images/subjectivity.png" style = "width:75%"></center>
-          <p>Each boxplot tells us how subjective the articles for each news source is, subjectivity is a number is on a scale of 0 to 1,
-	  where 0 is very objective and 1 is very subjective. The degree of subjectivity of article titles are important because it tells
-	  us how biased each of the website are. From the boxplot, we can see that none of the news outlets are very subjective, but they
+          <p>Each boxplot tells us how subjective the articles for each news source is, subjectivity is a number scaled from 0 to 1,
+	  where 0 is very objective and 1 is very subjective. The degree of subjectivity of article titles is important because it tells
+	  us how biased each of the websites are. From the boxplot, we can see that none of the news outlets are very subjective, but they
 	  have varying degrees of subjectivity. The least subjective news outlet is Wall Street Journal and the most subjective news outlets
 	  are Washington Post and Breitbart. Wall Street Journal was found to be more objective, and they also had more neutral and slightly
 	  negative article titles. Washington Post and Breitbart were found to be subjective, and they also have some of the more positive article
-	  titles in relation to the Trump administration. This does not completely match up with our assumption that The Washington Post would have more
-	  neutral to slightly negative news articles because it is one of the more liberal news outlets (against Trump) and Breitbart is headed by a
-	  few who hold a position in office under Trump (supporters).
+	  titles in relation to the Trump administration. This does not completely match our assumption that The Washington Post would have more
+	  neutral to slightly negative news articles, because it is one of the more liberal news outlets (against Trump), while one of Breitbart’s old editors, is the current White House Chief Strategist (supporters).
+
           </p>
 
 	<p>After looking at the polarity and subjectivity of the article titles, we broke down the titles into noun phrases to further examine how the grouped
-	news sources portrayed Trump and his administration. A noun phrase contains a noun and any words that modify us, this helps us put into context how Trump’s
+	news sources portrayed Trump and his administration. A noun phrase contains a noun and any words that modify it, this helps contextualize how Trump’s
 	administration may be portrayed. Below is a table of percentage of polarity within noun phrases. The percentage was used because we had a various amount of noun phrases for different news source.
 		</p>
 		<center><img src = "images/polarityratio.png" style = "width:75%"><br></center>
@@ -138,8 +138,8 @@
 		<center><img src = "images/liberal_word_freq.png" style = "width:75%"><br></center>
 		<center><img src = "images/other_word_freq.png" style = "width:75%"><br></center>
 
-	<p> At first sight, we can see that conservative and other news outlet have more nouns rather than verbs. Liberal news outlets have more verbs which could mean the titles are referring to events or sayings that the Trump Administration is involved whereas more nouns are just firm statements of events and topics that involve the Trump Administration. Conservative news outlets like to cover about topics about taxes and budget. Other news outlet top content revolves around healthcare. Liberal news outlet has a good balance between talking about budget and healthcare. Some common words across all three categories of news outlets are Obama, travel, ban.
-		</p>
+	<p> At first sight, we see that conservative and other news outlets have more nouns  than verbs. Liberal news outlets have more verbs which could mean the titles are referring to events or sayings that the Trump Administration is involved, whereas more nouns are firm statements of events and topics that involve the Trump Administration. Conservative news outlets like to cover topics about taxes and budget. Other news outlets top content revolves around healthcare. Liberal news outlet maintain a balance between talking about the budget and healthcare. Some common words across all three categories of news outlets are Obama, travel, ban.
+</p>
 
 
 
@@ -148,27 +148,26 @@
           <p>Since there did not seem to be a large difference between the polarity and subjectivity of the titles for the different kinds of news sources, we wanted to examine how similar the titles are from each other to see if Conservative news sources, Liberal news sources, and "Other" news sources report on similar topics.
           We applied pairwise comparisons of the article titles using the scikit-learn Python package. Our results are shown in the table below:
           <center><img src = "images/similartitles.png" style="width:75%"><br></center>
-          Comparing the titles for liberal, conservative, and other news sources for the most similar titles, there are the most similarities within groups rather than between groups. Liberal news sources share the most similar titles with other liberal news sources. Conservative news sources also have the most similar titles to other conservative news sources.
-          This may mean that the type of news that liberal news sources cover are very different from those of conservative news sources. Conservative news sources never share a similar article title with liberal news sources. Although Conservative news sources and Liberal news sources are both mostly neutral to slightly positive when addressing the Trump administration, the way that the news is reported or the type of news reported may be vastly different. As shown in the table, conservative news sources and liberal news also share similar titles to "other" news sources.
+          Comparing the titles for liberal, conservative, and other news sources for the most similar titles, the most similarities occur within groups rather than between groups. Liberal news sources share the most similar titles with other liberal news sources Conservative news sources never share a similar article title with liberal news sources. Although Conservative news sources and Liberal news sources are both mostly neutral to slightly positive when addressing the Trump administration, the way that the news is reported or the type of news reported may be vastly different. As shown in the table, conservative news sources and liberal news also share similar titles to "other" news sources.
             This implies that "other" news sources cover similar news to liberal and conservative news. </p>
 
           <br><br>
           <h3>The Media's Ideology and Its Perception of Trump</h3>
           In this section we observe how the viewer base's ideology of different websites affect their reporting on Trump. In order to get ideology scores we webscraped the <a href="http://www.journalism.org/interactives/media-polarization/table/consume/">Pew Reports website</a>.
-          We obtained the tables first and then had to split the tables using regular expressions.
-          After creating the data frames we used Pew's scoring ideology scoring criterion: [-8.5 for extreme left, -4.5 for moderate left, 0 for neutral, 4.5 for moderate right, and 8.5 for extreme left.
+          We obtained the tables first and then split the tables using regular expressions.
+          After creating the data frames we used Pew's scoring ideology scoring criterion: [-8.5 for extreme left, -4.5 for moderate left, 0 for neutral, 4.5 for moderate right, and 8.5 for extreme left].
           Since we did not have Pew's survey data we first summed the rows, creating a total percentage of people that trust the news source.
           These numbers will represent the amount of people who actually believe the news source.
           We then divided each indivual value from the summed row allowing us to see the percentage of the makeup of people who trust this source.
           We then multiplied these valus by their respective group in the data frame and then summed across to get that news paper's average viewer base.
-          These values wil not necessarily be the same as Pew's actual scores due to Pew having ranges for each value between -10 and 10 and then scoring survey results accordingly.
+          These values will not necessarily be the same as Pew's actual scores due to Pew having ranges for each value between -10 and 10.
           However; this data was not openly available and in our case we thought this would give us a rough estimate of Pew's actual scores. Next, we obtained the size of viewership of each news source by summing the original trust percentages.
           This gave us a value that would illustrate how many people have actually trust of the news source.
           We then used this value to represent the size of people who trust the website, and this variable is illustrated in the plots below as the size of the dot.<br>
           <center><img src = "images/b1.png" style="width:75%"><br></center>
-          In this plot we look at Pew's Ideology Score versus how Trump is represented in the media. In the plot we see a slight trend in news corporations positive sentiment towards Trump and their viewership's ideology. The most obvious examples of this trend include the Economist and Breitbart.
+          In this plot we look at Pew's Ideology Score versus how Trump is represented in the media. In the plot we see a slight trend in news corporation's positive sentiment towards Trump and their viewership ideology. The most obvious examples of this trend include the Economist and Breitbart.
           For this plot we transformed our sentiment variable by multiplying it by two and subtracting one in order to make positive sentiments positive and negate negative sentiments.
-          Both on the opposite ends of political ideology, however they both seemingly represent their audiences view of Trump.
+          While both are on opposite ends of political ideology, they both seemingly represent their audience's view of Trump.
           In the next plot we take a look at a random sample of the webpages articles sentiments against a random sample of a newspapers regular title sentiment.
           <br>
           <center><img src = "images/b2.png" style="width:75%"><br></center>
@@ -197,6 +196,8 @@
               <center><img src = "images/sarcasm.png"></center>
               Clearly the second sentence is sarcastic and should be counted as negative but since we couldn't automate checking for sarcasm we left it as is.
           </ul>
+          <h3>Conclusion</h3>
+            In our project we illustrated how most news outlets title contain mostly neutral titles. The vast majority of all websites have similar neutral titles. However; we also saw sentiment splits in Conservative, Neutral, and Liberal news sites. Liberal sites tend to report on similar issues, likewise Conservative publications and Neutral publications create similar titles to other publications with similar ideological sentiments. Thus we see a slights split on reporting. When looking at subjectivity of the publications we found that most of the titles are objective with a few outliers. Finally we observed the contrast in Political Ideology of viewers and the publication’s coverage of Trump. From this we witnessed that there seems to be an upward trend in the relationship between ideology and sentiment towards Trump. Surprising though was Fox did not report on Trump favorably, whereas Breitbart covered Trump significantly more favorably than any other source. Thus we will need to obtain more data to conclude that Conservative sites report on Trump more favorably than Liberal ones. We can make note, that websites like Breitbart, recently corroborated by President Trump carry a much more positive sentiment reporting on the Executive Branch. We need more data and a better understanding of websites such as Drudge and Mother Jones to see the extremities of extreme partisan websites and their title sentiment towards Trump. What we can see is that major news sources report the news in a similar fashion, while showing slight favoritism to their viewers ideology. 
         </div>
 
 	    <br>
