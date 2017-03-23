@@ -131,16 +131,6 @@
 		<center><img src = "images/all_polarity_noun.png" style = "width:75%"><br></center>
 		<p> From the barplot above, conservative news outlets show consistency as their overall noun phrase polarity is more positive then negative. Other and liberal news outlets also show more positive noun phrase polarity than negative. An explanation for this is that noun phrases out of content with the whole article title may not show negativity or positivity accurately. </p>
 
-	 <h3>Question: What events does each grouped news sources frequently report on?</h3>
-	 <p> Breaking down the article title's one step further, we looked at the frequency of the words used. First, we removed the names related to Trump's Administration and stop words such as "the" and "that". Then using the Counter() function from the "collections" package will return the most commonly used words. We plotted the top 20 words used per category below:
-		</p>
-		<center><img src = "images/cons_word_freq.png" style = "width:73%"><br></center>
-		<center><img src = "images/liberal_word_freq.png" style = "width:75%"><br></center>
-		<center><img src = "images/other_word_freq.png" style = "width:75%"><br></center>
-
-	<p> At first sight, we see that conservative and other news outlets have more nouns  than verbs. Liberal news outlets have more verbs which could mean the titles are referring to events or sayings that the Trump Administration is involved, whereas more nouns are firm statements of events and topics that involve the Trump Administration. Conservative news outlets like to cover topics about taxes and budget. Other news outlets top content revolves around healthcare. Liberal news outlet maintain a balance between talking about the budget and healthcare. Some common words across all three categories of news outlets are Obama, travel, ban.
-</p>
-
 
 
           <br><br>
@@ -152,6 +142,16 @@
             This implies that "other" news sources cover similar news to liberal and conservative news. </p>
 
           <br><br>
+          <h3>Question: What events does each grouped news sources frequently report on?</h3>
+          <p> Breaking down the article title's one step further, we looked at the frequency of the words used. First, we removed the names related to Trump's Administration and stop words such as "the" and "that". Then using the Counter() function from the "collections" package will return the most commonly used words. We plotted the top 20 words used per category below:
+           </p>
+           <center><img src = "images/cons_word_freq.png" style = "width:73%"><br></center>
+           <center><img src = "images/liberal_word_freq.png" style = "width:75%"><br></center>
+           <center><img src = "images/other_word_freq.png" style = "width:75%"><br></center>
+
+         <p> At first sight, we see that conservative and other news outlets have more nouns  than verbs. Liberal news outlets have more verbs which could mean the titles are referring to events or sayings that the Trump Administration is involved, whereas more nouns are firm statements of events and topics that involve the Trump Administration. Conservative news outlets like to cover topics about taxes and budget. Other news outlets top content revolves around healthcare. Liberal news outlet maintain a balance between talking about the budget and healthcare. Some common words across all three categories of news outlets are Obama, travel, ban.
+       </p>
+       <br><br>
           <h3>The Media's Ideology and Its Perception of Trump</h3>
           In this section we observe how the viewer base's ideology of different websites affect their reporting on Trump. In order to get ideology scores we webscraped the <a href="http://www.journalism.org/interactives/media-polarization/table/consume/">Pew Reports website</a>.
           We obtained the tables first and then split the tables using regular expressions.
@@ -197,7 +197,7 @@
               Clearly the second sentence is sarcastic and should be counted as negative but since we couldn't automate checking for sarcasm we left it as is.
           </ul>
           <h3>Conclusion</h3>
-            In our project we illustrated how most news outlets title contain mostly neutral titles. The vast majority of all websites have similar neutral titles. However; we also saw sentiment splits in Conservative, Neutral, and Liberal news sites. Liberal sites tend to report on similar issues, likewise Conservative publications and Neutral publications create similar titles to other publications with similar ideological sentiments. Thus we see a slights split on reporting. When looking at subjectivity of the publications we found that most of the titles are objective with a few outliers. Finally we observed the contrast in Political Ideology of viewers and the publication’s coverage of Trump. From this we witnessed that there seems to be an upward trend in the relationship between ideology and sentiment towards Trump. Surprising though was Fox did not report on Trump favorably, whereas Breitbart covered Trump significantly more favorably than any other source. Thus we will need to obtain more data to conclude that Conservative sites report on Trump more favorably than Liberal ones. We can make note, that websites like Breitbart, recently corroborated by President Trump carry a much more positive sentiment reporting on the Executive Branch. We need more data and a better understanding of websites such as Drudge and Mother Jones to see the extremities of extreme partisan websites and their title sentiment towards Trump. What we can see is that major news sources report the news in a similar fashion, while showing slight favoritism to their viewers ideology. 
+            In our project we illustrated how most news outlets title contain mostly neutral titles. The vast majority of all websites have similar neutral titles. However; we also saw sentiment splits in Conservative, Neutral, and Liberal news sites. Liberal sites tend to report on similar issues, likewise Conservative publications and Neutral publications create similar titles to other publications with similar ideological sentiments. Thus we see a slights split on reporting. When looking at subjectivity of the publications we found that most of the titles are objective with a few outliers. Finally we observed the contrast in Political Ideology of viewers and the publication’s coverage of Trump. From this we witnessed that there seems to be an upward trend in the relationship between ideology and sentiment towards Trump. Surprising though was Fox did not report on Trump favorably, whereas Breitbart covered Trump significantly more favorably than any other source. Thus we will need to obtain more data to conclude that Conservative sites report on Trump more favorably than Liberal ones. We can make note, that websites like Breitbart, recently corroborated by President Trump carry a much more positive sentiment reporting on the Executive Branch. We need more data and a better understanding of websites such as Drudge and Mother Jones to see the extremities of extreme partisan websites and their title sentiment towards Trump. What we can see is that major news sources report the news in a similar fashion, while showing slight favoritism to their viewers ideology.
         </div>
 
 	    <br>
